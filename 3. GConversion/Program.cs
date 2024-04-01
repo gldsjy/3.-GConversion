@@ -10,6 +10,7 @@ namespace _3.GConversion
     {
         static void Main(string[] args)
         {
+            test: 
             Console.WriteLine("Choose what do you want to convert");
             Console.WriteLine("Press 1 for seconds to minutes");
             Console.WriteLine("Press 2 for minutes to hours");
@@ -35,12 +36,16 @@ namespace _3.GConversion
                     Console.WriteLine(seconds + " second/s is ");
                     Console.WriteLine("");
                     Console.WriteLine("= " + minutes + " minute/s and " + remainder + " second/s");
+                    Console.WriteLine("");
+                    goto test;
                 }
                 else
                 {
                     Console.WriteLine(seconds + " second/s is ");
                     Console.WriteLine("");
                     Console.WriteLine( "= " + (double)seconds / 60 + " minute/s");
+                    Console.WriteLine("");
+                    goto test;
                 }
             }
             else if (mode == "2")
@@ -55,12 +60,16 @@ namespace _3.GConversion
                     Console.WriteLine(minutes + " minutes/s is ");
                     Console.WriteLine("");
                     Console.WriteLine("= " + hours + " hour/s and " + remainder + " minute/s");
+                    Console.WriteLine("");
+                    goto test;
                 }
                 else
                 {
                     Console.WriteLine(minutes + " minutes/s is ");
                     Console.WriteLine("");
                     Console.WriteLine("= " + (double)minutes / 60 + " hour/s");
+                    Console.WriteLine("");
+                    goto test;
                 }
             }
             else if (mode == "3")
@@ -75,12 +84,16 @@ namespace _3.GConversion
                     Console.WriteLine(hours + " hour/s is ");
                     Console.WriteLine("");
                     Console.WriteLine("= " + days + " day/s and " + remainder + " hour/s");
+                    Console.WriteLine("");
+                    goto test;
                 }
                 else
                 {
                     Console.WriteLine(hours + " hour/s is ");
                     Console.WriteLine("");
                     Console.WriteLine("= " + (double)hours / 24 + " day/s");
+                    Console.WriteLine("");
+                    goto test;
                 }
             }
             else if (mode == "4")
@@ -95,18 +108,24 @@ namespace _3.GConversion
                     Console.WriteLine(days + " day/s is ");
                     Console.WriteLine("");
                     Console.WriteLine("= " + months + " month/s and " + remainder + " day/s");
+                    Console.WriteLine("");
+                    goto test;
                 }
                 else
                 {
                     Console.WriteLine(days + " day/s is ");
                     Console.WriteLine("");
                     Console.WriteLine("= " + (double)days / 30 + " month/s");
+                    Console.WriteLine("");
+                    goto test;
                 }
             }
             else
             {
                 Console.WriteLine("");
                 Console.WriteLine("Invalid input");
+                Console.WriteLine("");
+                goto test; 
             }
             Console.ReadKey();
         }
